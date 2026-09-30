@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Run · Parte 4 — Clase de Español A1–A2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Chakra+Petch:wght@600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ambiente -->
+<div class="polvo" style="top:18%;left:7%;width:9px;height:9px"></div>
+<div class="polvo" style="top:30%;left:88%;width:7px;height:7px;animation-delay:1.2s"></div>
+<div class="polvo" style="top:62%;left:5%;width:6px;height:6px;animation-delay:2.4s"></div>
+<div class="polvo" style="top:24%;left:62%;width:5px;height:5px;animation-delay:3.1s"></div>
+<div class="polvo" style="top:70%;left:92%;width:8px;height:8px;animation-delay:.6s"></div>
+<div id="desierto"><svg viewBox="0 0 1200 130" preserveAspectRatio="xMidYMax slice">
+  <!-- ciudad de oro medio enterrada -->
+  <g fill="#e8c04a">
+    <rect x="520" y="46" width="24" height="60"/><polygon points="514,46 550,46 532,22"/>
+    <rect x="600" y="30" width="30" height="76"/><polygon points="592,30 638,30 615,2"/>
+    <rect x="684" y="46" width="24" height="60"/><polygon points="678,46 714,46 696,22"/>
+    <rect x="546" y="66" width="138" height="40"/>
+  </g>
+  <g fill="#8a6a2a"><rect x="528" y="58" width="8" height="12" rx="3"/><rect x="611" y="44" width="9" height="14" rx="3"/><rect x="692" y="58" width="8" height="12" rx="3"/><rect x="576" y="78" width="9" height="14" rx="3"/><rect x="648" y="78" width="9" height="14" rx="3"/></g>
+  <path d="M615,2 L620,-10 L627,0 Z" fill="#2fae94"/>
+  <!-- columnas rotas -->
+  <g fill="#dcb87a">
+    <rect x="180" y="72" width="18" height="34"/><rect x="174" y="66" width="30" height="8"/>
+    <rect x="250" y="84" width="16" height="22"/>
+    <rect x="960" y="70" width="18" height="36"/><rect x="954" y="64" width="30" height="8"/>
+    <rect x="1030" y="86" width="16" height="20"/>
+  </g>
+  <!-- estatua -->
+  <g fill="#e8c04a" transform="translate(360,60)">
+    <rect x="-14" y="24" width="28" height="8"/>
+    <rect x="-8" y="-2" width="16" height="28"/>
+    <circle cx="0" cy="-10" r="10"/>
+    <path d="M-10,-18 L-4,-28 L0,-21 L4,-28 L10,-18 Z"/>
+  </g>
+  <!-- dunas -->
+  <path d="M0,98 Q180,80 380,96 T760,90 T1200,100 L1200,130 L0,130 Z" fill="#e8c88a"/>
+  <path d="M0,112 Q260,100 520,112 T1200,110 L1200,130 L0,130 Z" fill="#dcb87a"/>
+  <!-- aves doradas -->
+  <g stroke="#e0a63a" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M110,34 q10,-8 20,0 M130,34 q10,-8 20,0"/>
+    <path d="M840,26 q8,-7 16,0 M856,26 q8,-7 16,0"/>
+  </g>
+</svg></div>
+<div id="arenaFx"></div>
+<div id="cutin"><div class="big" id="cutinTxt">¡LA CIUDAD DESPIERTA!</div><div class="sub">Cookie Run · Parte 4 · Reino del Queso Dorado</div></div>
+
+<div id="hud">
+  <div class="emblem"></div>
+  <div class="title">Cookie Run · Parte 4 <span>· Español A1–A2</span></div>
+  <div id="progressWrap"><div id="progressBar"></div><div id="runMark">🐦</div></div>
+  <div id="counter"><b>01</b> / 23</div>
+</div>
+
+<div class="nav" id="prev">‹</div>
+<div class="nav" id="next">›</div>
+
+<div id="deck">
+
+<!-- 0 · PORTADA -->
+<section class="slide" id="s0">
+  <div class="inner">
+    <div class="tagline">La ciudad bajo la arena · Cookie Run: Kingdom</div>
+    <div class="badge"><svg viewBox="0 0 210 150">
+      <circle cx="150" cy="34" r="20" fill="#f5d76e"/>
+      <g fill="#e8c04a" stroke="#b5822a" stroke-width="2">
+        <rect x="66" y="60" width="20" height="52"/><polygon points="60,60 92,60 76,34"/>
+        <rect x="112" y="60" width="20" height="52"/><polygon points="106,60 138,60 122,34"/>
+        <rect x="86" y="76" width="26" height="36"/>
+      </g>
+      <rect x="72" y="72" width="8" height="11" rx="3" fill="#8a6a2a"/>
+      <rect x="118" y="72" width="8" height="11" rx="3" fill="#8a6a2a"/>
+      <rect x="95" y="90" width="9" height="14" rx="3" fill="#8a6a2a"/>
+      <path d="M76,34 L80,22 L86,32 Z" fill="#2fae94"/>
+      <path d="M0,112 Q52,100 106,112 T210,108 L210,150 L0,150 Z" fill="#e8c88a"/>
+      <g stroke="#e0a63a" stroke-width="3" fill="none" stroke-linecap="round">
+        <path d="M20,40 q8,-7 16,0 M36,40 q8,-7 16,0"/>
+      </g>
+      <path d="M186,84 l3,8 8,3 -8,3 -3,8 -3,-8 -8,-3 8,-3 Z" fill="#f5d76e"/>
+    </svg></div>
+    <h1>El <span class="accentO">Reino del Queso Dorado</span></h1>
+    <p class="lead">Bajo la arena duerme una ciudad de oro, con estatuas gigantes y una reina que perdió sus recuerdos. Hoy leerás la profecía (<b>viajaré, será</b>) y llevarás mensajes (<b>le doy, te cuento</b>). <span class="kr">황금 왕국의 예언!</span></p>
+    <div class="recap">
+      <span>🎞️ Ya usas la foto antigua</span>
+      <span>🔁 Ya tienes el atajo mágico</span>
+    </div>
+    <button class="btn oro" data-go="1">Cruzar el desierto ›</button>
+  </div>
+</section>
+
+<!-- 1 · OBJETIVOS -->
+<section class="slide" id="s1">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Misión del desierto</div>
+    <h2>Tu misión de hoy</h2>
+    <div class="objectives">
+      <div class="obj" style="--qc:var(--arena)"><span class="qz"></span><span class="mark">VOCAB</span> La arena, el oro y la profecía <span class="kr">· 어휘</span></div>
+      <div class="obj" style="--qc:var(--oro)"><span class="qz"></span><span class="mark">GRAMÁTICA</span> Futuro: la profecía dorada 🔮 <span class="kr">· 미래시제</span></div>
+      <div class="obj" style="--qc:var(--vino)"><span class="qz"></span><span class="mark">GRAMÁTICA</span> Me, te, le, nos, les: el mensajero 📬 <span class="kr">· 간접목적격</span></div>
+      <div class="obj" style="--qc:var(--jade)"><span class="qz"></span><span class="mark">LECTURA</span> La profecía y la reina sin memoria <span class="kr">· 독해</span></div>
+      <div class="obj" style="--qc:var(--noche)"><span class="qz"></span><span class="mark">COMBATE</span> El Coloso Dorado y la reina de oro <span class="kr">· 보스전</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · ROSTER -->
+<section class="slide" id="s2">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Expediente · Leyendas</div>
+    <h2>Las galletas <span class="accentO">legendarias</span></h2>
+    <p class="lead" style="font-size:15px">Toca cada carta: todas esperan algo que <b>pasará</b>. <span class="kr">카드를 눌러 보세요!</span></p>
+    <div class="roster" id="roster"></div>
+  </div>
+</section>
+
+<!-- 3 · VOCABULARIO -->
+<section class="slide" id="s3">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Equipo de misión · Vocabulario</div>
+    <h2>El equipaje del <span class="accentO">desierto</span></h2>
+    <p class="lead" style="font-size:15px">Ocho palabras nuevas. Toca para ver el coreano y un ejemplo. <span class="kr">새 단어 = 새 보물!</span></p>
+    <div class="cards" id="vocabCards"></div>
+  </div>
+</section>
+
+<!-- 4 · INTRUSO -->
+<section class="slide" id="s4">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Actividad · Detecta al intruso</div>
+    <h2>¿Cuál es <span class="accentV">el intruso</span>?</h2>
+    <p class="lead" style="font-size:15px">Tres palabras son del mismo grupo. Una no pertenece… ¡encuéntrala! <span class="kr">스파이 단어를 찾아라!</span></p>
+    <div class="scene solo">
+      <svg viewBox="0 0 700 88" preserveAspectRatio="xMidYMax slice">
+        <defs><linearGradient id="dune" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd0e8"/><stop offset="1" stop-color="#f0d8a0"/></linearGradient></defs>
+        <rect width="700" height="88" fill="url(#dune)"/>
+        <circle cx="600" cy="24" r="16" fill="#f5d76e"/>
+        <g fill="#dcb87a"><rect x="120" y="50" width="16" height="30"/><rect x="114" y="44" width="28" height="8"/><rect x="180" y="60" width="14" height="20"/></g>
+        <g fill="#e8c04a" transform="translate(330,44)">
+          <rect x="-12" y="22" width="24" height="7"/><rect x="-7" y="-2" width="14" height="24"/><circle cx="0" cy="-9" r="9"/>
+          <path d="M-9,-16 L-4,-25 L0,-19 L4,-25 L9,-16 Z"/>
+        </g>
+        <g stroke="#e0a63a" stroke-width="3" fill="none" stroke-linecap="round"><path d="M470,28 q8,-7 16,0 M486,28 q8,-7 16,0"/></g>
+        <path d="M0,68 Q160,56 340,68 T700,64 L700,88 L0,88 Z" fill="#e8c88a"/>
+        <path d="M0,80 Q220,72 460,80 T700,78 L700,88 L0,88 Z" fill="#dcb87a"/>
+      </svg>
+      <span class="lbl">El desierto dorado</span>
+    </div>
+    <div class="roundtag" id="intrusoRound">Ronda 1 / 3</div>
+    <div class="intruso-words" id="intrusoWords"></div>
+    <div class="feedback" id="intrusoFb"></div>
+  </div>
+</section>
+
+<!-- 5 · FUTURO COGNITIVO -->
+<section class="slide" id="s5">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Gramática cognitiva · I</div>
+    <h2>La <span class="accentO">profecía dorada</span> 🔮</h2>
+    <div class="cog">
+      <div class="panel cogbox">
+        <h3>La idea: pega y listo</h3>
+        <p class="pega">
+          <span class="inf">viajar</span> + <span class="term">é</span> = viajar<b>é</b><br>
+          <span class="inf">volver</span> + <span class="term">á</span> = volver<b>á</b><br>
+          <span class="inf">vivir</span> + <span class="term">emos</span> = vivir<b>emos</b>
+        </p>
+        <p class="bigidea">El futuro es la profecía: la terminación se <b>pega al verbo entero</b>, sin quitar nada. ¡Las tres familias (-ar, -er, -ir) usan las MISMAS terminaciones! <span class="kr">동사원형 + 어미</span></p>
+      </div>
+      <div class="panel cogbox">
+        <h3>¿Cuándo se usa?</h3>
+        <div class="pares">
+          <div class="par"><span class="em">🔮</span><span>Profecías y predicciones<small>La reina <b>despertará</b>.</small></span></div>
+          <div class="par"><span class="em">📅</span><span>Planes lejanos<small>El año próximo <b>viajaré</b> a Corea.</small></span></div>
+          <div class="par"><span class="em">🤔</span><span>Suposiciones<small>¿Dónde <b>estará</b> la llave?</small></span></div>
+        </div>
+        <p class="bigidea" style="margin-top:8px"><span class="g">Palabras amigas:</span> mañana · el año próximo · algún día · dentro de 10 años</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · TABLA FUTURO -->
+<section class="slide" id="s6">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Gramática cognitiva · II</div>
+    <h2>Las <span class="accentJ">mismas</span> terminaciones para todos</h2>
+    <div class="tables">
+      <table class="conj panel">
+        <caption>🔮 Verbo entero + terminación</caption>
+        <tr><th>yo</th><td>viajar<span class="end">é</span></td></tr>
+        <tr><th>tú</th><td>viajar<span class="end">ás</span></td></tr>
+        <tr><th>él / ella</th><td>viajar<span class="end">á</span></td></tr>
+        <tr><th>nosotros</th><td>viajar<span class="end">emos</span></td></tr>
+        <tr><th>ustedes / ellos</th><td>viajar<span class="end">án</span></td></tr>
+      </table>
+      <table class="conj panel">
+        <caption>⚠️ Los que pierden una letra</caption>
+        <tr><th>tener</th><td><span class="end">tendré</span> · poner → pondré</td></tr>
+        <tr><th>poder</th><td><span class="end">podré</span> · saber → sabré</td></tr>
+        <tr><th>salir</th><td><span class="end">saldré</span> · venir → vendré</td></tr>
+        <tr><th>hacer</th><td><span class="end">haré</span> · decir → diré</td></tr>
+        <tr><th>hay</th><td><span class="end">habrá</span> (una fiesta)</td></tr>
+      </table>
+    </div>
+    <p class="notice">💡 Todas las formas llevan tilde menos <b>nosotros</b>: viajar<b>é</b>, viajar<b>ás</b>, viajar<b>á</b>, viajar<b>emos</b> (sin tilde), viajar<b>án</b>. Y recuerda: <b>voy a viajar</b> = plan cercano ✈️ · <b>viajaré</b> = futuro más lejano o solemne 🔮.</p>
+  </div>
+</section>
+
+<!-- 7 · LA TABLILLA -->
+<section class="slide" id="s7">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Actividad · Descifra la tablilla</div>
+    <h2>La <span class="accentO">tablilla</span> de la profecía 📜</h2>
+    <p class="lead" style="font-size:15px">Cada acierto enciende una línea de la profecía antigua. ¿Qué dice el destino del reino? <span class="kr">예언이 한 줄씩 빛난다!</span></p>
+    <div class="forge-count" id="proCount">Línea 1 / 6</div>
+    <div class="tablilla">
+      <span class="lineaP" id="p1">✦ Un día el sol se apagará sobre la ciudad de oro.</span>
+      <span class="lineaP" id="p2">✦ La arena cubrirá las torres y las estatuas.</span>
+      <span class="lineaP" id="p3">✦ Pero una galleta pequeña y valiente vendrá del este.</span>
+      <span class="lineaP" id="p4">✦ Traerá una campana y todos la escucharán.</span>
+      <span class="lineaP" id="p5">✦ Entonces la reina despertará y recordará su nombre.</span>
+      <span class="lineaP" id="p6">✦ Y habrá luz otra vez en el Reino del Queso Dorado.</span>
+    </div>
+    <div class="panel" style="width:100%;max-width:700px"><p class="forge-sentence" id="proSentence" style="font-size:18.5px"></p></div>
+    <div class="endings" id="proOpts"></div>
+    <div class="feedback" id="proFb"></div>
+  </div>
+</section>
+
+<!-- 8 · LECTURA 1 -->
+<section class="slide" id="s8">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Lectura 1 · Capítulo siete</div>
+    <h2>La ciudad bajo la <span class="accentO">arena</span></h2>
+    <div class="scene">
+      <svg viewBox="0 0 760 96" preserveAspectRatio="xMidYMax slice">
+        <defs><linearGradient id="des2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd0e8"/><stop offset="1" stop-color="#eed49c"/></linearGradient></defs>
+        <rect width="760" height="96" fill="url(#des2)"/>
+        <circle cx="670" cy="22" r="17" fill="#f5d76e"/>
+        <g fill="#e8c04a">
+          <rect x="300" y="36" width="20" height="52"/><polygon points="294,36 326,36 310,14"/>
+          <rect x="360" y="46" width="18" height="42"/><polygon points="354,46 384,46 369,26"/>
+          <rect x="320" y="58" width="40" height="30"/>
+        </g>
+        <g fill="#8a6a2a"><rect x="307" y="48" width="7" height="10" rx="3"/><rect x="366" y="56" width="7" height="10" rx="3"/></g>
+        <g fill="#dcb87a"><rect x="140" y="58" width="16" height="30"/><rect x="134" y="52" width="28" height="8"/><rect x="560" y="62" width="15" height="26"/></g>
+        <g stroke="#e0a63a" stroke-width="3" fill="none" stroke-linecap="round"><path d="M180,24 q8,-7 16,0 M196,24 q8,-7 16,0"/><path d="M480,20 q7,-6 14,0 M494,20 q7,-6 14,0"/></g>
+        <path d="M0,76 Q180,64 380,76 T760,72 L760,96 L0,96 Z" fill="#e8c88a"/>
+        <path d="M0,86 Q240,78 480,86 T760,84 L760,96 L0,96 Z" fill="#dcb87a"/>
+      </svg>
+      <span class="lbl">Ruinas de oro</span>
+    </div>
+    <div class="panel reading" style="border-top:none;margin-top:-15px">
+      <p>Después de cruzar el desierto, el equipo encuentra torres de oro medio enterradas en la arena. Hay estatuas gigantes y aves doradas que vuelan en círculo. Financier lee una tablilla antigua: —Aquí está la profecía. Dice que una galleta valiente <span class="vb">vendrá</span>, que la reina <span class="vb">despertará</span> y que <span class="vb">habrá</span> luz otra vez.</p>
+      <p>—Entonces nosotros la <span class="vb2">ayudaremos</span> —dice GingerBrave—. <span class="vb">Entraremos</span> en la ciudad, <span class="vb">buscaremos</span> a la reina y le <span class="vb2">contaremos</span> toda la verdad. Pero cuando entran, las estatuas abren los ojos: la ciudad tiene guardianes… y todavía no confían en nadie.</p>
+    </div>
+    <div class="gloss">
+      <span><b>enterrado</b> · 묻힌</span>
+      <span><b>el ave</b> · 새</span>
+      <span><b>la tablilla</b> · 석판</span>
+      <span><b>la verdad</b> · 진실</span>
+      <span><b>confiar</b> · 믿다</span>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · DETECTIVE -->
+<section class="slide" id="s9">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Comprensión · Modo detective</div>
+    <h2>El texto no lo dice… <span class="accentV">¡pero tú lo sabes!</span></h2>
+    <div class="roundtag" id="detRound">Pregunta 1 / 4</div>
+    <p class="quiz-q" id="detQ"></p>
+    <div class="options" id="detOpts"></div>
+    <p class="explain" id="detExp"></p>
+  </div>
+</section>
+
+<!-- 10 · OI COGNITIVO -->
+<section class="slide" id="s10">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz" style="background:var(--vino)"></span>Gramática cognitiva · III</div>
+    <h2>El <span class="accentV">mensajero</span> 📬</h2>
+    <div class="cog">
+      <div class="panel cogbox">
+        <h3>La idea: ¿a quién llega?</h3>
+        <p class="msg">
+          Doy <span class="cosa">la campana</span> 🔔 → ¿a quién?<br>
+          <span class="oi">le</span> doy la campana <b>a la reina</b> 👑<br>
+          <span class="oi">te</span> cuento un secreto 🤫 <b>a ti</b>
+        </p>
+        <p class="bigidea" style="margin-top:6px">El ave mensajera lleva la cosa y busca a la persona que la <b>recibe</b>. Esa persona es el mensajero: <b>me, te, le, nos, les</b>. <span class="kr">누구에게? = 간접목적어</span></p>
+      </div>
+      <div class="panel cogbox">
+        <h3>Los cinco destinos</h3>
+        <div class="pares">
+          <div class="par"><span class="em">😊</span><span><b>me</b> · a mí<small>Me cuentan la historia.</small></span></div>
+          <div class="par"><span class="em">👧</span><span><b>te</b> · a ti<small>Te doy un regalo.</small></span></div>
+          <div class="par"><span class="em">👑</span><span><b>le</b> · a él / a ella / a usted<small>Le damos la campana.</small></span></div>
+          <div class="par"><span class="em">👥</span><span><b>nos</b> · a nosotros<small>Nos dice la verdad.</small></span></div>
+          <div class="par"><span class="em">👬</span><span><b>les</b> · a ellos / a ustedes<small>Les traemos comida.</small></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · TABLA OI -->
+<section class="slide" id="s11">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz" style="background:var(--vino)"></span>Gramática cognitiva · IV</div>
+    <h2>Los verbos que <span class="accentV">entregan</span></h2>
+    <div class="tables">
+      <table class="conj panel">
+        <caption>📬 Verbos de mensajero</caption>
+        <tr><th>dar</th><td><span class="end">Le</span> doy el mapa.</td></tr>
+        <tr><th>decir</th><td><span class="end">Te</span> digo la verdad.</td></tr>
+        <tr><th>contar</th><td><span class="end">Nos</span> cuenta la profecía.</td></tr>
+        <tr><th>regalar</th><td><span class="end">Les</span> regalo gelatinas.</td></tr>
+        <tr><th>escribir</th><td><span class="end">Me</span> escribe una carta.</td></tr>
+      </table>
+      <table class="conj panel">
+        <caption>✨ Trucos importantes</caption>
+        <tr><th>doble</th><td><span class="end">Le</span> doy la campana <span class="end">a la reina</span>. (¡las dos!)</td></tr>
+        <tr><th>2 sitios</th><td><span class="end">Le</span> voy a contar = Voy a contar<span class="end">le</span></td></tr>
+        <tr><th>orden</th><td>¡Cuénta<span class="end">me</span> la historia!</td></tr>
+        <tr><th>ya lo sabes</th><td><span class="end">Me</span> gusta · <span class="end">Le</span> encanta 🪄</td></tr>
+      </table>
+    </div>
+    <p class="notice">💡 ¡Ojo! <b>lo/la</b> es la COSA (la campana → la doy) y <b>le</b> es la PERSONA que la recibe (a la reina → le doy). En español se repite el mensajero aunque digas el nombre: «<b>Le</b> doy la campana <b>a Financier</b>».</p>
+  </div>
+</section>
+
+<!-- 12 · EL AVE MENSAJERA -->
+<section class="slide" id="s12">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz" style="background:var(--vino)"></span>Actividad · Entrega el mensaje</div>
+    <h2>El <span class="accentO">ave dorada</span> mensajera 🐦</h2>
+    <p class="lead" style="font-size:15px">Elige el mensajero correcto y el ave volará hasta la persona que recibe. <span class="kr">정답을 맞히면 새가 날아간다!</span></p>
+    <div class="forge-count" id="aveCount">Mensaje 1 / 6</div>
+    <div class="correo">
+      <svg viewBox="0 0 600 170">
+        <defs><linearGradient id="cieloD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd0e8"/><stop offset="1" stop-color="#f0dcae"/></linearGradient></defs>
+        <rect width="600" height="170" fill="url(#cieloD)"/>
+        <circle cx="540" cy="28" r="15" fill="#f5d76e"/>
+        <path d="M0,120 Q160,108 320,120 T600,116 L600,170 L0,170 Z" fill="#e8c88a"/>
+        <path d="M0,140 Q200,132 420,140 T600,138 L600,170 L0,170 Z" fill="#dcb87a"/>
+        <!-- destinatarios -->
+        <g font-size="30" text-anchor="middle">
+          <text class="dest" id="d0" x="70" y="128">😊</text>
+          <text class="dest" id="d1" x="190" y="128">👧</text>
+          <text class="dest" id="d2" x="310" y="128">👑</text>
+          <text class="dest" id="d3" x="420" y="128">👥</text>
+          <text class="dest" id="d4" x="530" y="128">👬</text>
+        </g>
+        <g font-size="11" text-anchor="middle" fill="#7a5a2a" font-family="Chakra Petch, sans-serif">
+          <text x="70" y="146">a mí</text><text x="190" y="146">a ti</text><text x="310" y="146">a la reina</text><text x="420" y="146">a nosotros</text><text x="530" y="146">a ellos</text>
+        </g>
+        <!-- ave -->
+        <g id="ave">
+          <g transform="translate(70,62)">
+            <ellipse cx="0" cy="0" rx="16" ry="11" fill="#f5d76e" stroke="#c99320" stroke-width="2"/>
+            <circle cx="12" cy="-6" r="7" fill="#f5d76e" stroke="#c99320" stroke-width="2"/>
+            <circle cx="14" cy="-7" r="1.8" fill="#4a3418"/>
+            <path d="M19,-5 L27,-3 L19,-1 Z" fill="#e0a63a"/>
+            <path d="M-4,-6 q-12,-12 -20,-2 q10,4 20,8 Z" fill="#e8c04a"/>
+            <path d="M-16,2 L-28,6 L-16,8 Z" fill="#e0a63a"/>
+            <rect x="-6" y="8" width="14" height="10" rx="2" fill="#fffaec" stroke="#c99320" stroke-width="1.5"/>
+            <path d="M-6,8 L1,14 L8,8" fill="none" stroke="#c99320" stroke-width="1.5"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="panel" style="width:100%;max-width:700px"><p class="forge-sentence" id="aveSentence" style="font-size:18.5px"></p></div>
+    <div class="endings" id="aveOpts"></div>
+    <div class="feedback" id="aveFb"></div>
+  </div>
+</section>
+
+<!-- 13 · LECTURA 2 -->
+<section class="slide" id="s13">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Lectura 2 · Capítulo ocho</div>
+    <h2>La reina sin <span class="accentU">recuerdos</span></h2>
+    <div class="scene">
+      <svg viewBox="0 0 760 96" preserveAspectRatio="xMidYMax slice">
+        <defs><linearGradient id="salon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a4a2a"/><stop offset="1" stop-color="#a8862a"/></linearGradient></defs>
+        <rect width="760" height="96" fill="url(#salon)"/>
+        <g fill="#e8c04a">
+          <rect x="120" y="26" width="18" height="62"/><rect x="112" y="20" width="34" height="8"/>
+          <rect x="620" y="26" width="18" height="62"/><rect x="612" y="20" width="34" height="8"/>
+          <rect x="250" y="34" width="16" height="54"/><rect x="243" y="28" width="30" height="8"/>
+          <rect x="500" y="34" width="16" height="54"/><rect x="493" y="28" width="30" height="8"/>
+        </g>
+        <!-- trono -->
+        <g transform="translate(383,58)">
+          <rect x="-26" y="0" width="52" height="34" fill="#c99320"/>
+          <rect x="-30" y="-24" width="60" height="26" rx="6" fill="#e8c04a"/>
+          <path d="M-16,-24 L-8,-38 L0,-28 L8,-38 L16,-24 Z" fill="#f5d76e"/>
+        </g>
+        <g fill="#fff6d0" opacity=".55"><circle cx="200" cy="30" r="3"/><circle cx="560" cy="24" r="2.6"/><circle cx="330" cy="20" r="2.4"/></g>
+        <g stroke="#f5d76e" stroke-width="3" fill="none" stroke-linecap="round"><path d="M660,44 q8,-7 16,0 M676,44 q8,-7 16,0"/></g>
+        <path d="M0,84 Q200,76 420,84 T760,80 L760,96 L0,96 Z" fill="#7a5a1a"/>
+      </svg>
+      <span class="lbl">El salón del trono</span>
+    </div>
+    <div class="panel reading" style="border-top:none;margin-top:-15px">
+      <p>En el salón del trono está la reina Golden Cheese. Es enorme, brillante… y no recuerda nada. —¿Quiénes son ustedes? ¿Qué <span class="vb2">me</span> quieren quitar? —pregunta con voz dura.</p>
+      <p>—Nadie <span class="vb2">te</span> quiere quitar nada —responde GingerBrave—. <span class="vb2">Te</span> traemos un regalo. Financier <span class="vb2">le</span> da la campana antigua y <span class="vb2">le</span> cuenta la historia del reino: —Antes usted <span class="vb">protegía</span> a su gente y todos <span class="vb">la</span> querían. La reina toca la campana. Suena un sonido dorado y las aves vuelven al cielo. Por un momento, sus ojos brillan: —Ese sonido… yo <span class="vb2">lo</span> conozco.</p>
+    </div>
+    <div class="gloss">
+      <span><b>el trono</b> · 왕좌</span>
+      <span><b>quitar</b> · 빼앗다</span>
+      <span><b>duro</b> · 딱딱한, 차가운</span>
+      <span><b>sonar</b> · 소리가 나다</span>
+      <span><b>el sonido</b> · 소리</span>
+    </div>
+  </div>
+</section>
+
+<!-- 14 · ORDENA -->
+<section class="slide" id="s14">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Comprensión · La historia</div>
+    <h2>Ordena la historia <span class="accentO">1 → 5</span></h2>
+    <p class="lead" style="font-size:15px">Toca los momentos en el orden correcto. <span class="kr">이야기 순서대로 누르세요!</span></p>
+    <div class="order-list" id="orderList"></div>
+    <div class="feedback" id="orderFb"></div>
+  </div>
+</section>
+
+<!-- 15 · COMBATE 1 -->
+<section class="slide" id="s15">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Combate · ¡Los guardianes despiertan!</div>
+    <h2>¡Un <span class="accentO">Coloso Dorado</span> bloquea la entrada!</h2>
+    <div class="battlefield" id="battlefield">
+      <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.85" viewBox="0 0 760 240" preserveAspectRatio="xMidYMax slice">
+        <g fill="#c99320">
+          <rect x="60" y="140" width="22" height="80"/><rect x="52" y="132" width="38" height="10"/>
+          <rect x="660" y="140" width="22" height="80"/><rect x="652" y="132" width="38" height="10"/>
+        </g>
+        <g fill="#e8c04a" opacity=".55">
+          <rect x="330" y="160" width="18" height="60"/><polygon points="324,160 354,160 339,138"/>
+        </g>
+        <g fill="#ffe9b0" opacity=".5"><circle cx="240" cy="50" r="3"/><circle cx="500" cy="66" r="2.6"/></g>
+        <path d="M0,214 Q200,206 420,214 T760,210 L760,240 L0,240 Z" fill="#8a6a2a"/>
+      </svg>
+      <div class="battle-top">
+        <span class="enemy-tag">⚠ Enemigo · Estatua guardiana</span>
+        <div class="party" title="Tu equipo">
+          <i style="background:var(--oro)"></i><i style="background:var(--jade)"></i><i style="background:var(--vino)"></i><i style="background:var(--cielo)"></i><i style="background:var(--uva)"></i><i style="background:#fff"></i>
+        </div>
+      </div>
+      <div class="arena">
+        <div class="aura"></div>
+        <div class="sprite" id="bossSprite">🗿</div>
+        <div class="hplabel">Coloso Dorado · HP</div>
+        <div class="hpbar"><div class="hpfill" id="bossHp"></div></div>
+      </div>
+      <div class="miniSlash" id="miniSlash"></div>
+    </div>
+    <div id="bossGame" style="display:flex;flex-direction:column;align-items:center;gap:12px;width:100%">
+      <p class="quiz-q" id="bossQ"></p>
+      <div class="options" id="bossOpts" style="max-width:520px"></div>
+    </div>
+    <div id="bossWin" class="hidden" style="text-align:center">
+      <p class="victory">✦ ¡VICTORIA! ✦</p>
+      <p class="lead">El coloso se arrodilla y abre la puerta del palacio 🏛️. Adentro, sentada en un trono enorme, espera la reina de oro… y no recuerda a nadie.</p>
+      <button class="btn gold" data-go="16" style="margin-top:12px">Continuar: Acto II ›</button>
+    </div>
+  </div>
+</section>
+
+<!-- 16 · ACTO II -->
+<section class="slide" id="sInter">
+  <div class="inner">
+    <div class="chapter" style="max-width:640px;width:100%">
+      <div class="acto">✦ Acto II ✦</div>
+      <h1>El sonido de la <span class="accentO">campana</span></h1>
+      <p class="pausa">🧃 Pausa de 5 minutos · 5분 휴식!</p>
+    </div>
+    <div class="objectives" style="max-width:560px">
+      <div class="obj" style="--qc:var(--arena)"><span class="qz"></span><span class="mark">JUEGO</span> Memoria del tesoro <span class="kr">· 기억 게임</span></div>
+      <div class="obj" style="--qc:var(--jade)"><span class="qz"></span><span class="mark">HABLAR</span> Entrevista con Burnt Cheese <span class="kr">· 말하기</span></div>
+      <div class="obj" style="--qc:var(--oro)"><span class="qz"></span><span class="mark">HABLAR</span> ¿Y tú, qué harás? <span class="kr">· 비교</span></div>
+      <div class="obj" style="--qc:var(--vino)"><span class="qz"></span><span class="mark">ESCUCHAR</span> Dictado de la tablilla <span class="kr">· 받아쓰기</span></div>
+      <div class="obj" style="--qc:var(--noche)"><span class="qz"></span><span class="mark">COMBATE</span> La reina de oro <span class="kr">· 최종 보스</span></div>
+    </div>
+    <button class="btn oro" data-go="17">Comenzar Acto II ›</button>
+  </div>
+</section>
+
+<!-- 17 · MEMORIA -->
+<section class="slide" id="sMemo">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Acto II · Juego</div>
+    <h2>Memoria del <span class="accentO">tesoro</span></h2>
+    <p class="lead" style="font-size:15px">Encuentra las parejas: palabra en español ↔ símbolo y coreano. Di la palabra en voz alta cada vez que encuentres una. <span class="kr">짝을 찾으세요!</span></p>
+    <div class="memo-stats" id="memoStats">Parejas: 0 / 6 · Intentos: 0</div>
+    <div class="memo" id="memoGrid"></div>
+    <div class="feedback" id="memoFb"></div>
+  </div>
+</section>
+
+<!-- 18 · ENTREVISTA -->
+<section class="slide" id="sRol">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Acto II · Misión de rol</div>
+    <h2>Charla con <span class="accentO">Burnt Cheese</span> 🧀</h2>
+    <div class="cog">
+      <div class="panel cogbox">
+        <h3>1 · Cuenta tu futuro</h3>
+        <div class="rlist" id="rolList"></div>
+      </div>
+      <div class="panel cogbox">
+        <h3>2 · El viejo guardián pregunta 🎙️</h3>
+        <p class="ivq" id="ivQ">Toca el botón y responde en voz alta.</p>
+        <p class="ivhint" id="ivHint"></p>
+        <div style="display:flex;justify-content:center;margin-top:8px">
+          <button class="btn gold" id="ivBtn">🎲 Nueva pregunta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 19 · ¿Y TÚ? -->
+<section class="slide" id="sComp">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Acto II · ¿Y tú?</div>
+    <h2>¿Y tú, qué <span class="accentO">harás</span>? 🔮</h2>
+    <p class="lead" style="font-size:15px">Lee la profecía del reino, elige tu respuesta y dila en voz alta con el futuro. <span class="kr">소리 내어 말해 보세요!</span></p>
+    <div class="roundtag" id="compRound">Frase 1 / 5</div>
+    <div class="panel" style="width:100%;max-width:700px"><p class="comp-sent" id="compSent"></p></div>
+    <div class="sort-btns">
+      <button class="sort-btn now" id="compSi">🔮 ¡Yo también lo haré!<small>Mi futuro es parecido</small></button>
+      <button class="sort-btn past" id="compNo">🌙 Yo no<small>Mi futuro es diferente</small></button>
+    </div>
+    <p class="comp-model" id="compModel"></p>
+  </div>
+</section>
+
+<!-- 20 · DICTADO -->
+<section class="slide" id="sDict">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Acto II · Escuchar y escribir</div>
+    <h2>Dictado de la <span class="accentO">tablilla</span> 📜</h2>
+    <p class="lead" style="font-size:15px">La tablilla dorada dicta la profecía. Escucha, escribe la frase y comprueba. ¡Cuidado con las tildes! <span class="kr">듣고 쓰세요!</span></p>
+    <div class="roundtag" id="dictRound">Mensaje 1 / 5</div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+      <button class="btn" id="dictPlay">🔊 Escuchar</button>
+      <button class="btn" id="dictSlow">🐢 Más lento</button>
+    </div>
+    <input type="text" class="dict-in" id="dictIn" placeholder="Escribe el mensaje aquí..." autocomplete="off">
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+      <button class="btn gold" id="dictCheck">📜 Comprobar</button>
+      <button class="btn" id="dictNext">Siguiente ›</button>
+    </div>
+    <div class="feedback" id="dictFb"></div>
+    <details class="profe"><summary>👩‍🏫 Solo profe: ver frase</summary><span id="dictSecret"></span></details>
+  </div>
+</section>
+
+<!-- 21 · JEFE FINAL -->
+<section class="slide" id="sBoss2">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz" style="background:var(--noche)"></span>Combate final · El trono de oro</div>
+    <h2 id="boss2Title">¡La <span class="accentO">reina de oro</span> no confía en nadie!</h2>
+    <div class="battlefield final" id="battlefield2">
+      <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.85" viewBox="0 0 760 240" preserveAspectRatio="xMidYMax slice">
+        <g fill="#e8c04a" opacity=".8">
+          <rect x="90" y="120" width="22" height="100"/><rect x="82" y="112" width="38" height="10"/>
+          <rect x="640" y="120" width="22" height="100"/><rect x="632" y="112" width="38" height="10"/>
+          <rect x="230" y="140" width="18" height="80"/><rect x="223" y="132" width="32" height="10"/>
+          <rect x="500" y="140" width="18" height="80"/><rect x="493" y="132" width="32" height="10"/>
+        </g>
+        <g fill="#fff6d0" opacity=".5"><circle cx="300" cy="52" r="3.5"/><circle cx="470" cy="42" r="3"/><circle cx="380" cy="30" r="2.6"/></g>
+        <path d="M0,214 Q200,206 420,214 T760,210 L760,240 L0,240 Z" fill="#5a4210"/>
+      </svg>
+      <div class="battle-top">
+        <span class="enemy-tag">⚠ Reina sin memoria · Poder del oro</span>
+        <div class="party" title="Tu equipo">
+          <i style="background:var(--oro)"></i><i style="background:var(--jade)"></i><i style="background:var(--vino)"></i><i style="background:var(--cielo)"></i><i style="background:var(--uva)"></i><i style="background:#fff"></i>
+        </div>
+      </div>
+      <div class="arena">
+        <div class="aura" style="background:radial-gradient(circle, rgba(245,215,110,.6), transparent 65%)"></div>
+        <div class="sprite" id="boss2Sprite">👑</div>
+        <div class="hplabel">Golden Cheese · HP</div>
+        <div class="hpbar seg8"><div class="hpfill" id="boss2Hp"></div></div>
+      </div>
+      <div class="miniSlash" id="miniSlash2"></div>
+    </div>
+    <div id="boss2Game" style="display:flex;flex-direction:column;align-items:center;gap:12px;width:100%">
+      <p class="quiz-q" id="boss2Q"></p>
+      <div class="options" id="boss2Opts" style="max-width:520px"></div>
+    </div>
+    <div id="boss2Win" class="hidden" style="text-align:center">
+      <p class="victory">🕊️ ¡LA CAMPANA SUENA! 🕊️</p>
+      <p class="lead">Las aves doradas vuelven al cielo y la reina baja las manos. —Ese sonido… mi gente… —dice, y una lágrima de oro cae en el trono. Todavía no lo recuerda todo, pero ya no está sola. La historia continúa…</p>
+      <button class="btn gold" data-go="22" style="margin-top:12px">Ver el final ›</button>
+    </div>
+  </div>
+</section>
+
+<!-- 22 · FINAL -->
+<section class="slide" id="s22">
+  <div class="inner">
+    <div class="eyebrow"><span class="qz"></span>Gran final</div>
+    <h2>Tu <span class="accentO">profecía</span> 🔮</h2>
+    <p class="lead" style="font-size:15.5px">Última misión: escribe tu propia profecía con el futuro 🔮 y envía tus mensajes 📬. <span class="kr">너의 예언을 써 보세요!</span></p>
+    <div class="write panel" style="width:100%">
+      <label>🔮 LA PROFECÍA · Tu futuro de verdad</label>
+      <input type="text" placeholder="1. El año próximo yo...">
+      <input type="text" placeholder="2. Algún día viajaré a... y allí...">
+      <input type="text" placeholder="3. Dentro de diez años seré... y tendré...">
+      <label style="margin-top:8px">📬 EL MENSAJERO · ¿A quién?</label>
+      <input type="text" placeholder="4. A mi mejor amiga le voy a regalar...">
+      <input type="text" placeholder="5. A mis padres les diré que...">
+    </div>
+    <p class="notice">La profecía 🔮 pega la terminación al verbo entero (<b>viajaré, será, habrá</b>) y el mensajero 📬 dice a quién llega la cosa (<b>me, te, le, nos, les</b>). ¡Ciudad de oro despierta, galleta! ✦</p>
+  </div>
+</section>
+
+</div>
+
+<div id="dots"></div>
+  <script src="script.js"></script>
+</body>
+</html>
